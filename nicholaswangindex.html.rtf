@@ -1,0 +1,417 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>Nicholas Wang - Fiction Writer</title>\
+    <link rel="preconnect" href="https://fonts.googleapis.com">\
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">\
+    <style>\
+        * \{\
+            margin: 0;\
+            padding: 0;\
+            box-sizing: border-box;\
+        \}\
+\
+        :root \{\
+            --bg-primary: #fafaf8;\
+            --bg-secondary: #ffffff;\
+            --text-primary: #2a2a2a;\
+            --text-secondary: #555;\
+            --terracotta: #c86847;\
+            --terracotta-light: #e8917a;\
+            --terracotta-pale: #f4d5ca;\
+            --border-color: #e8e8e8;\
+            --shadow: rgba(200, 104, 71, 0.08);\
+            --shadow-hover: rgba(200, 104, 71, 0.15);\
+        \}\
+\
+        body.dark-mode \{\
+            --bg-primary: #2b2b2b;\
+            --bg-secondary: #353535;\
+            --text-primary: #e0e0e0;\
+            --text-secondary: #b8b8b8;\
+            --border-color: #4a4a4a;\
+            --shadow: rgba(0, 0, 0, 0.3);\
+            --shadow-hover: rgba(0, 0, 0, 0.5);\
+        \}\
+\
+        body \{\
+            font-family: 'Crimson Text', 'Georgia', serif;\
+            line-height: 1.8;\
+            color: var(--text-primary);\
+            background: var(--bg-primary);\
+            transition: background 0.3s, color 0.3s;\
+        \}\
+\
+        header \{\
+            background: var(--bg-secondary);\
+            color: var(--text-primary);\
+            padding: 80px 20px;\
+            text-align: center;\
+            border-bottom: 3px solid var(--terracotta);\
+            position: relative;\
+            transition: background 0.3s;\
+        \}\
+\
+        .theme-toggle \{\
+            position: absolute;\
+            top: 30px;\
+            right: 30px;\
+            background: transparent;\
+            color: var(--text-secondary);\
+            border: 1px solid var(--border-color);\
+            padding: 8px 12px;\
+            border-radius: 20px;\
+            cursor: pointer;\
+            font-family: 'Crimson Text', serif;\
+            font-size: 0.85em;\
+            transition: all 0.3s;\
+            opacity: 0.6;\
+        \}\
+\
+        .theme-toggle:hover \{\
+            opacity: 1;\
+            border-color: var(--terracotta);\
+            color: var(--terracotta);\
+        \}\
+\
+        header h1 \{\
+            font-family: 'Libre Baskerville', serif;\
+            font-size: 3em;\
+            font-weight: 700;\
+            letter-spacing: 4px;\
+            margin-bottom: 15px;\
+            color: var(--text-primary);\
+        \}\
+\
+        header p \{\
+            font-size: 1.2em;\
+            font-style: italic;\
+            color: var(--terracotta);\
+            font-weight: 300;\
+        \}\
+\
+        nav \{\
+            background: var(--bg-secondary);\
+            padding: 15px;\
+            text-align: center;\
+            position: sticky;\
+            top: 0;\
+            z-index: 100;\
+            box-shadow: 0 2px 10px var(--shadow);\
+            border-bottom: 1px solid var(--border-color);\
+            transition: background 0.3s;\
+        \}\
+\
+        nav a \{\
+            color: var(--text-primary);\
+            text-decoration: none;\
+            margin: 0 25px;\
+            font-size: 1em;\
+            letter-spacing: 1px;\
+            transition: color 0.3s;\
+        \}\
+\
+        nav a:hover \{\
+            color: var(--terracotta);\
+        \}\
+\
+        .container \{\
+            max-width: 900px;\
+            margin: 0 auto;\
+            padding: 60px 30px;\
+        \}\
+\
+        section \{\
+            margin-bottom: 80px;\
+        \}\
+\
+        h2 \{\
+            font-family: 'Libre Baskerville', serif;\
+            font-size: 2.5em;\
+            font-weight: 700;\
+            margin-bottom: 30px;\
+            color: var(--text-primary);\
+            border-bottom: 2px solid var(--terracotta);\
+            padding-bottom: 15px;\
+        \}\
+\
+        .bio \{\
+            font-size: 1.15em;\
+            line-height: 2;\
+            text-align: justify;\
+        \}\
+\
+        .bio p \{\
+            margin-bottom: 25px;\
+        \}\
+\
+        .loading \{\
+            display: inline-block;\
+        \}\
+\
+        .loading::after \{\
+            content: '.';\
+            animation: dots 1.5s steps(3, end) infinite;\
+        \}\
+\
+        @keyframes dots \{\
+            0%, 20% \{\
+                content: '.';\
+            \}\
+            40% \{\
+                content: '..';\
+            \}\
+            60%, 100% \{\
+                content: '...';\
+            \}\
+        \}\
+\
+        .story-card \{\
+            background: var(--bg-secondary);\
+            padding: 40px;\
+            margin-bottom: 40px;\
+            border-left: 4px solid var(--terracotta);\
+            box-shadow: 0 2px 15px var(--shadow);\
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;\
+        \}\
+\
+        .story-card:hover \{\
+            transform: translateX(5px);\
+            box-shadow: 0 4px 25px var(--shadow-hover);\
+        \}\
+\
+        .story-card h3 \{\
+            font-family: 'Libre Baskerville', serif;\
+            font-size: 1.8em;\
+            margin-bottom: 15px;\
+            color: var(--text-primary);\
+            font-weight: 700;\
+        \}\
+\
+        .story-card .excerpt \{\
+            font-style: italic;\
+            color: var(--text-secondary);\
+            margin-bottom: 20px;\
+            padding-left: 20px;\
+            border-left: 3px solid var(--terracotta-light);\
+            line-height: 1.9;\
+        \}\
+\
+        .story-card .description \{\
+            color: var(--text-secondary);\
+            line-height: 1.9;\
+        \}\
+\
+        .contact-box \{\
+            background: var(--terracotta);\
+            color: white;\
+            padding: 50px;\
+            text-align: center;\
+            border-radius: 5px;\
+        \}\
+\
+        .contact-box h2 \{\
+            color: white;\
+            border-bottom: 2px solid white;\
+            display: inline-block;\
+            padding-bottom: 10px;\
+        \}\
+\
+        .contact-box p \{\
+            font-size: 1.2em;\
+            margin: 30px 0;\
+        \}\
+\
+        .contact-box a \{\
+            color: white;\
+            text-decoration: none;\
+            font-size: 1.3em;\
+            letter-spacing: 1px;\
+            transition: opacity 0.3s;\
+            font-weight: 600;\
+        \}\
+\
+        .contact-box a:hover \{\
+            opacity: 0.8;\
+        \}\
+\
+        footer \{\
+            background: var(--bg-secondary);\
+            color: var(--text-secondary);\
+            text-align: center;\
+            padding: 30px;\
+            font-size: 0.9em;\
+            border-top: 1px solid var(--border-color);\
+            transition: background 0.3s;\
+        \}\
+\
+        @media (max-width: 768px) \{\
+            header h1 \{\
+                font-size: 2em;\
+            \}\
+            \
+            .theme-toggle \{\
+                top: 20px;\
+                right: 20px;\
+                font-size: 0.9em;\
+                padding: 8px 16px;\
+            \}\
+            \
+            nav a \{\
+                display: block;\
+                margin: 10px 0;\
+            \}\
+            \
+            .container \{\
+                padding: 40px 20px;\
+            \}\
+            \
+            .story-card \{\
+                padding: 25px;\
+            \}\
+        \}\
+    </style>\
+</head>\
+<body>\
+    <header>\
+        <button class="theme-toggle" onclick="toggleTheme()">\uc0\u55356 \u57113  Dark Mode</button>\
+        <h1>NICHOLAS WANG</h1>\
+        <p>Fiction Writer | Los Angeles</p>\
+        <p style="font-style: normal; color: var(--text-primary); margin-top: 10px; font-size: 1.05em;">Fiction where the surreal breaks into everyday life\'97stories of contemporary Los Angeles caught between the ordinary and the extraordinary.</p>\
+    </header>\
+\
+    <nav>\
+        <a href="#about">About</a>\
+        <a href="#publications">Publications</a>\
+        <a href="#work">Stories</a>\
+        <a href="#contact">Contact</a>\
+    </nav>\
+\
+    <div class="container">\
+        <section id="about">\
+            <h2>About</h2>\
+            <div class="bio">\
+                <p>Nicholas Wang is a Taiwanese and Vietnamese American writer of literary fiction based in Los Angeles, where he was born and raised. He grew up on the Westside in public schools and currently resides in Mid-City. His work explores what it feels like to be surrounded by people yet fundamentally alone, the strangeness lurking in ordinary moments, and the split seconds when the world reveals itself as something other than what we thought it was.</p>\
+                \
+                <p>Wang has lived in Chicago, Houston, and San Diego, and spent years working in restaurants\'97from dishwashing to bartending. He has also worked as an EMT and has a degree in kinesiology. These experiences have taught him to notice how people move through their days, the small moments that reveal something true. His characters exist in the gaps\'97between connection and isolation, routine and rupture, the life they're living and the one slipping away from them.</p>\
+                \
+                <p>He writes primarily short fiction, blending realism with elements of magical realism and the absurd. His stories tend to be set in LA\'97from tar pits to overpasses to apartment bathrooms\'97where the magical and surreal emerge from the utterly real.</p>\
+\
+                <p>Wang is currently studying in the Advanced Short Story class at UCLA Extension Writers' Program and is a member of the Robertson Writers Group. His work will appeal to readers of George Saunders, Nana Kwame Adjei-Brenyah, and Carmen Maria Machado.</p>\
+            </div>\
+        </section>\
+\
+        <section id="publications">\
+            <h2>Publications & Recognition</h2>\
+            <div class="bio">\
+                <p style="font-style: italic; color: var(--text-secondary);">Loading<span class="loading"></span></p>\
+            </div>\
+        </section>\
+\
+        <section id="work">\
+            <h2>Selected Work</h2>\
+\
+            <div class="story-card">\
+                <h3>In Goo</h3>\
+                <div class="excerpt">\
+                    "He checked himself out one last time in the mirror, adjusting his collar and rubbing his freshly shaven chin, and then walked out of the apartment. Summer was starting, and although the day was still quite early, the morning dew was already vanishing into the atmosphere. He slipped on some sunglasses and breathed in the pleasant scent of gasoline and garbage."\
+                </div>\
+                <div class="description">\
+                    A sharply-dressed man escapes his monotonous life for an impromptu walk through Hancock Park, where he encounters the La Brea Tar Pits and a precocious six-year-old who asks questions he can't quite answer. A meditation on being stuck, being alone, and the small moments that remind us we're alive.\
+                </div>\
+            </div>\
+\
+            <div class="story-card">\
+                <h3>Omakase Sushi Bar</h3>\
+                <div class="excerpt">\
+                    "I went down a single set of stairs and ended up in the omakase room. It was exactly how it always was: cold and empty, with the slight odor of fish."\
+                </div>\
+                <div class="description">\
+                    A bartender in Chicago recounts a night when the power went out and he descended into the restaurant's basement to find the circuit breaker. What begins as a routine task becomes a surreal journey into an impossible space. Told years later to his cousin over coffee in California, the story explores the fear of being trapped, the unreliability of memory, and the thin line between what happened and what we think happened.\
+                </div>\
+            </div>\
+\
+            <div class="story-card">\
+                <h3>Parachute, Parachute</h3>\
+                <div class="excerpt">\
+                    "I hadn't dreamt in a long time. In fact, I couldn't remember the last dream I had. I knew I used to have dreams\'97at least, periodically, as a girlfriend of mine had once told me that I murmur in my sleep."\
+                </div>\
+                <div class="description">\
+                    Years after a breakup, a man discovers his ex-girlfriend's dream journal\'97and finds a record of words he spoke while sleeping. A story about the things we fail to say while awake, the passivity that erodes love, and how we learn what we've lost only after it's gone.\
+                </div>\
+            </div>\
+\
+            <div class="story-card">\
+                <h3>Can 'uh Beans</h3>\
+                <div class="excerpt">\
+                    "It was sweltering. The kind of day where, if you put your head close to the ground, you could see little ripples and waves rising in the air above the pavement. Where you could get a second-degree burn from leaning against a car left in the sun."\
+                </div>\
+                <div class="description">\
+                    William lives under the I-10 freeway with his shopping cart and moves slowly through a Los Angeles that barely registers his existence. On a brutally hot day, he navigates his small world while a stranger's song about beans drifts through the air. A story of invisibility and survival, told with compassion and unflinching clarity.\
+                </div>\
+            </div>\
+\
+            <div class="story-card">\
+                <h3>Drumstick Nub</h3>\
+                <div class="excerpt">\
+                    "He raised his eyebrows when his hand fell off. He had been waiting for the bus to arrive when it happened. There was no blood, no pain, and no one to witness it. It had simply fallen off."\
+                </div>\
+                <div class="description">\
+                    A man's hand falls off without warning while waiting for the bus. As he attempts to navigate his life with this inexplicable loss, the story follows the cascading consequences of a single surreal event. A darkly absurdist exploration of how we lose ourselves, piece by piece.\
+                </div>\
+            </div>\
+        </section>\
+\
+        <section id="contact">\
+            <div class="contact-box">\
+                <h2>Let's Connect</h2>\
+                <p>I'm currently seeking representation for my short story collection.</p>\
+                <p>For inquiries or to discuss my work:</p>\
+                <p><a href="mailto:nicholaswang5531@gmail.com">nicholaswang5531@gmail.com</a></p>\
+            </div>\
+        </section>\
+    </div>\
+\
+    <footer>\
+        <p>&copy; 2026 Nicholas Wang. All rights reserved.</p>\
+    </footer>\
+\
+    <script>\
+        function toggleTheme() \{\
+            const body = document.body;\
+            const button = document.querySelector('.theme-toggle');\
+            \
+            body.classList.toggle('dark-mode');\
+            \
+            if (body.classList.contains('dark-mode')) \{\
+                button.textContent = '\uc0\u9728 \u65039  Light Mode';\
+                localStorage.setItem('theme', 'dark');\
+            \} else \{\
+                button.textContent = '\uc0\u55356 \u57113  Dark Mode';\
+                localStorage.setItem('theme', 'light');\
+            \}\
+        \}\
+\
+        // Load saved theme preference\
+        window.addEventListener('DOMContentLoaded', () => \{\
+            const savedTheme = localStorage.getItem('theme');\
+            const button = document.querySelector('.theme-toggle');\
+            \
+            if (savedTheme === 'dark') \{\
+                document.body.classList.add('dark-mode');\
+                button.textContent = '\uc0\u9728 \u65039  Light Mode';\
+            \}\
+        \});\
+    </script>\
+</body>\
+</html>}
