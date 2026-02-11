@@ -3,7 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
     <title>Nicholas Wang - Fiction Writer</title>
+    <meta name="title" content="Nicholas Wang - Fiction Writer">
+    <meta name="description" content="Nicholas Wang is a Taiwanese and Vietnamese American writer of literary fiction based in Los Angeles. His stories blend realism with magical realism and the absurd.">
+    <meta name="author" content="Nicholas Wang">
+    <meta name="keywords" content="Nicholas Wang, fiction writer, literary fiction, short stories, Los Angeles writer, magical realism, contemporary fiction">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta property="og:title" content="Nicholas Wang - Fiction Writer">
+    <meta property="og:description" content="Fiction where the surreal breaks into everyday life—stories of contemporary Los Angeles caught between the ordinary and the extraordinary.">
+    <meta property="og:image" content="https://yourwebsite.com/preview-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourwebsite.com/">
+    <meta property="twitter:title" content="Nicholas Wang - Fiction Writer">
+    <meta property="twitter:description" content="Fiction where the surreal breaks into everyday life—stories of contemporary Los Angeles caught between the ordinary and the extraordinary.">
+    <meta property="twitter:image" content="https://yourwebsite.com/preview-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='80' font-size='80' fill='%23c86847'%3EN%3C/text%3E%3C/svg%3E">
+    
+    <!-- Google Analytics -->
+    <!-- Replace G-XXXXXXXXXX with your actual Measurement ID from analytics.google.com -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -53,6 +87,29 @@
             border-bottom: 3px solid var(--terracotta);
             position: relative;
             transition: background 0.3s;
+        }
+
+        .header-decorations {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-illustration {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            opacity: 0.3;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .header-illustration.left {
+            left: 20px;
+        }
+
+        .header-illustration.right {
+            right: 20px;
         }
 
         .theme-toggle {
@@ -277,6 +334,19 @@
                 font-size: 2em;
             }
             
+            .header-illustration {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .header-illustration.left {
+                left: 10px;
+            }
+            
+            .header-illustration.right {
+                right: 10px;
+            }
+            
             .theme-toggle {
                 top: 20px;
                 right: 20px;
@@ -326,9 +396,75 @@
 <body>
     <header>
         <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
-        <h1>NICHOLAS WANG</h1>
-        <p>Fiction Writer | Los Angeles</p>
-        <p style="font-style: normal; color: var(--text-primary); margin-top: 10px; font-size: 1.05em;">Fiction where the surreal breaks into everyday life—stories of contemporary Los Angeles caught between the ordinary and the extraordinary.</p>
+        <div class="header-decorations">
+            <!-- Hand-drawn Mammoth SVG (left) -->
+            <svg class="header-illustration left" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <g stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- Tusks -->
+                    <path d="M 25 55 Q 18 48 15 40 Q 13 35 14 32" />
+                    <path d="M 35 55 Q 42 48 45 40 Q 47 35 46 32" />
+                    
+                    <!-- Body -->
+                    <ellipse cx="45" cy="60" rx="25" ry="20" />
+                    
+                    <!-- Head -->
+                    <circle cx="30" cy="50" r="12" />
+                    
+                    <!-- Trunk -->
+                    <path d="M 22 56 Q 18 62 20 68 Q 22 72 25 73" />
+                    
+                    <!-- Legs -->
+                    <line x1="35" y1="75" x2="35" y2="88" />
+                    <line x1="45" y1="77" x2="45" y2="90" />
+                    <line x1="55" y1="77" x2="55" y2="90" />
+                    <line x1="65" y1="75" x2="65" y2="88" />
+                    
+                    <!-- Eye -->
+                    <circle cx="28" cy="48" r="1.5" fill="currentColor" />
+                    
+                    <!-- Ear -->
+                    <path d="M 38 45 Q 43 43 44 48 Q 43 52 38 50" />
+                    
+                    <!-- Fur texture lines -->
+                    <path d="M 42 38 L 45 42" opacity="0.5" />
+                    <path d="M 50 40 L 52 45" opacity="0.5" />
+                    <path d="M 58 42 L 60 48" opacity="0.5" />
+                </g>
+            </svg>
+            
+            <!-- Hand-drawn Parachute SVG (right) -->
+            <svg class="header-illustration right" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <g stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- Canopy -->
+                    <path d="M 20 35 Q 25 20 35 18 Q 50 15 65 18 Q 75 20 80 35" />
+                    <path d="M 20 35 Q 30 42 50 40 Q 70 42 80 35" />
+                    
+                    <!-- Canopy segments -->
+                    <line x1="35" y1="18" x2="38" y2="40" opacity="0.6" />
+                    <line x1="50" y1="16" x2="50" y2="40" opacity="0.6" />
+                    <line x1="65" y1="18" x2="62" y2="40" opacity="0.6" />
+                    
+                    <!-- Suspension lines -->
+                    <line x1="22" y1="35" x2="45" y2="70" />
+                    <line x1="35" y1="38" x2="47" y2="70" />
+                    <line x1="50" y1="40" x2="50" y2="70" />
+                    <line x1="65" y1="38" x2="53" y2="70" />
+                    <line x1="78" y1="35" x2="55" y2="70" />
+                    
+                    <!-- Person -->
+                    <circle cx="50" cy="78" r="5" />
+                    <line x1="50" y1="83" x2="50" y2="92" />
+                    <line x1="50" y1="86" x2="45" y2="90" />
+                    <line x1="50" y1="86" x2="55" y2="90" />
+                    <line x1="50" y1="92" x2="46" y2="98" />
+                    <line x1="50" y1="92" x2="54" y2="98" />
+                </g>
+            </svg>
+            
+            <h1>NICHOLAS WANG</h1>
+            <p>Fiction Writer | Los Angeles</p>
+            <p style="font-style: normal; color: var(--text-primary); margin-top: 10px; font-size: 1.05em;">Fiction where the surreal breaks into everyday life—stories of contemporary Los Angeles caught between the ordinary and the extraordinary.</p>
+        </div>
     </header>
 
     <nav>
@@ -421,7 +557,7 @@
                 <h2>Let's Connect</h2>
                 <p>I'm currently seeking representation for my short story collection.</p>
                 <p>For inquiries or to discuss my work:</p>
-                <p><a href="mailto:your-email@example.com">your-email@example.com</a></p>
+                <p><a href="mailto:nicholaswang5531@gmail.com">nicholaswang5531@gmail.com</a></p>
             </div>
         </section>
     </div>
