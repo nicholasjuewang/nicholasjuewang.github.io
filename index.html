@@ -105,6 +105,22 @@
             transition: background 0.3s;
         }
 
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: var(--text-primary);
+            padding: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+        }
+
         nav a {
             color: var(--text-primary);
             text-decoration: none;
@@ -286,10 +302,13 @@
     </header>
 
     <nav>
-        <a href="#about">About</a>
-        <a href="#publications">Publications</a>
-        <a href="#work">Stories</a>
-        <a href="#contact">Contact</a>
+        <button class="nav-toggle" onclick="toggleNav()">☰ Menu</button>
+        <div class="nav-links" id="navLinks">
+            <a href="#about" onclick="closeNav()">About</a>
+            <a href="#publications" onclick="closeNav()">Publications</a>
+            <a href="#work" onclick="closeNav()">Stories</a>
+            <a href="#contact" onclick="closeNav()">Contact</a>
+        </div>
     </nav>
 
     <div class="container">
@@ -300,7 +319,7 @@
                 
                 <p>Wang has lived in Chicago, Houston, and San Diego, and spent years working in restaurants—from dishwashing to bartending. He has also worked as an EMT and has a degree in kinesiology. These experiences have taught him to notice how people move through their days, the small moments that reveal something true. His characters exist in the gaps—between connection and isolation, routine and rupture, the life they're living and the one slipping away from them.</p>
                 
-                <p>He writes primarily short fiction, blending realism with elements of magical realism and the absurd. His stories tend to be set in LA—from tar pits to overpasses to apartment bathrooms—where the magical and surreal emerge from the utterly real.</p>
+                <p>He writes primarily short fiction, blending realism with elements of magical realism and the absurd. His stories tend to be set in LA—from tar pits and oceanside piers to under overpasses and apartment bathrooms—where the magical and surreal emerge from the utterly real.</p>
 
                 <p>Wang is currently studying in the Advanced Short Story class at UCLA Extension Writers' Program and is a member of the Robertson Writers Group. His work will appeal to readers of George Saunders, Nana Kwame Adjei-Brenyah, and Carmen Maria Machado.</p>
             </div>
@@ -407,6 +426,16 @@
                 button.textContent = '☀️ Light Mode';
             }
         });
+
+        function toggleNav() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        function closeNav() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.remove('active');
+        }
     </script>
 </body>
 </html>
