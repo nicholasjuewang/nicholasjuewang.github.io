@@ -797,6 +797,22 @@
                 localStorage.setItem('theme', 'light');
             }
         }
+
+        function toggleNav() {
+            const navLinks = document.getElementById('navLinks');
+            const navToggle = document.querySelector('.nav-toggle');
+            const isActive = navLinks.classList.toggle('active');
+            navToggle.setAttribute('aria-expanded', isActive);
+        }
+
+        function closeNav() {
+            const navLinks = document.getElementById('navLinks');
+            const navToggle = document.querySelector('.nav-toggle');
+            if (window.innerWidth <= 768) {
+                navLinks.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+        }
     </script>
 </head>
 <body>
@@ -919,7 +935,7 @@
                 <h2>Let's Connect</h2>
                 <p class="status-text">Currently seeking representation for <em>IN GOO</em>, a literary fiction collection of thirteen short stories where the surreal breaks into everyday life.</p>
                 <p class="cta-text">For representation inquiries or to request the full manuscript:</p>
-                <p><a href="mailto:nicholaswang5531@gmail.com" aria-label="Email Nicholas Wang" class="email-link">nicholaswang5531@gmail.com</a></p>
+                <p><a href="/cdn-cgi/l/email-protection#5f31363c3730333e2c283e31386a6a6c6e1f38323e3633713c3032" aria-label="Email Nicholas Wang" class="email-link"><span class="__cf_email__" data-cfemail="1c72757f7473707d6f6b7d727b29292f2d5c7b717d7570327f7371">[email&#160;protected]</span></a></p>
                 <p style="margin-top: 35px;">
                     <a href="Nicholas_Wang_Writers_Overview.pdf" download class="pdf-link">
                         📄 Download Writer's Overview
@@ -935,7 +951,7 @@
 
 
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Load saved theme preference
         window.addEventListener('DOMContentLoaded', () => {
             const savedTheme = localStorage.getItem('theme');
@@ -948,32 +964,8 @@
             }
         });
 
-        function toggleNav() {
-            const navLinks = document.getElementById('navLinks');
-            const navToggle = document.querySelector('.nav-toggle');
-            const isActive = navLinks.classList.toggle('active');
-            navToggle.setAttribute('aria-expanded', isActive);
-        }
-
-        function closeNav() {
-            const navLinks = document.getElementById('navLinks');
-            const navToggle = document.querySelector('.nav-toggle');
-            if (window.innerWidth <= 768) {
-                navLinks.classList.remove('active');
-                navToggle.setAttribute('aria-expanded', 'false');
-            }
-        }
-
         // Close nav when clicking outside
         document.addEventListener('click', function(event) {
             const nav = document.querySelector('nav');
             const navLinks = document.getElementById('navLinks');
             const navToggle = document.querySelector('.nav-toggle');
-            
-            if (!nav.contains(event.target) && navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                navToggle.setAttribute('aria-expanded', 'false');
-            }
-        });
-
-        //
