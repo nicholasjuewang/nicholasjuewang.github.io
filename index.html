@@ -592,6 +592,14 @@
             font-family: 'Cormorant Garamond', serif;
         }
 
+        .contact-box .email-link {
+            word-break: normal;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 90%;
+        }
+
         .contact-box a:hover {
             background: white;
             color: var(--terracotta);
@@ -964,8 +972,4 @@
             }
         });
 
-        // Close nav when clicking outside
-        document.addEventListener('click', function(event) {
-            const nav = document.querySelector('nav');
-            const navLinks = document.getElementById('navLinks');
-            const navToggle = document.querySelector('.nav-toggle');
+        // Close nav when clicking ou
